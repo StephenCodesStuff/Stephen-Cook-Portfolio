@@ -1,8 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import homeLogo from '../../assets/images/homebutton.png';
 
-function Header({ currentPage, handlePageChange }) {
+function Header() {
+    const [currentPage, setCurrentPage] = useState('Home');
+    const location = useLocation();
+  
+    useEffect(() => {
+      const pathname = location.pathname;
+      const titleCasePage =
+        pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2);
+      setCurrentPage(pathname === '/' ? 'Home' : titleCasePage);
+    }, [location.pathname]);
+  
+    const handlePageChange = (page) => setCurrentPage(page);
+    
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light text-align-right">
             {/* Use Link component to create a link that returns to the homepage on click */}
