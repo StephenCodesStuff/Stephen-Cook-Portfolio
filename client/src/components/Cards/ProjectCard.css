@@ -1,0 +1,36 @@
+/* ProjectCard.css */
+
+/* Style for the project cards */
+.project-card {
+    width: 18rem;
+    height: 400px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for the card images */
+  .project-card .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  /* Style for the card title and description */
+  .project-card .card-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .project-card .card-text {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  /* Style for the "View Project" button */
+  .project-card .btn-primary {
+    margin-top: auto;
+  }

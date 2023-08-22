@@ -25,7 +25,7 @@ function Header() {
                 className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
                 to="/"
             >
-                <img src={homeLogo} width="60" height="60" alt="Home Logo" />
+                <img src={homeLogo} width="60" height="100%" alt="Home Logo" />
             </Link>
             <ul className="nav nav-tabs">
                 <li className="nav-item">
